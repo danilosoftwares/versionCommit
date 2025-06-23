@@ -56,6 +56,34 @@ The provided token should have at least the following permissions:
 If you need to generate a token, visit:
 🔗 [GitHub Token Settings](https://github.com/settings/tokens)
 
+## What is Semantic Version ?
+
+Semantic Versioning (SemVer) is a software version control scheme that uses a structure of three numbers separated by periods to indicate the nature of changes in a project: MAJOR.MINOR.PATCH. Each number has a specific meaning, indicating whether the changes are compatible or not with previous versions.
+
+SemVer Structure and Rules:
+
+MAJOR (Major Version):
+
+Increments when incompatible changes are made to the software's API. This means that when updating to this new version, code that depends on the previous version may need to be modified to work correctly.
+
+MINOR (Minor Version):
+
+Increments when new functionality is added in a way that is compatible with previous versions. The existing API continues to work, but with additional features.
+
+PATCH (Patch Version):
+
+Increments when bug fixes or minor adjustments that do not change the API are made.
+
+Example Commits:
+```
+1.0.0: Initial release.
+1.1.0: feat: Added new functionality, compatible with 1.0.0.
+1.1.1: fix: Bug fix in 1.1.0.
+2.0.0: BREAKING CHANGE: Incompatible API changes, breaking compatibility with 1.x.
+````
+
+![](flow.svg)
+
 ## Contribution
 
 If you find any bugs or have suggestions, feel free to open an **Issue** or submit a **Pull Request** in the official repository:
