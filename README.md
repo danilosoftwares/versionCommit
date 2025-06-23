@@ -18,18 +18,26 @@ This will install the tool globally, allowing you to use it from anywhere in the
 
 ### Command:
 ```sh
-version-commit {token} {repository}
+version-commit {token} {repository} {branch}
 ```
 
-### Example:
+### Example simple:
 ```sh
 version-commit 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
 danilosoftwares/BloomMany
 ```
 
+### Example with branch:
+```sh
+version-commit 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
+danilosoftwares/BloomMany
+develop
+```
+
 ### Parameters:
 - `{token}`: Your **GitHub Personal Access Token (PAT)**, required for authentication and repository access.
 - `{repository}`: The repository name in the format `user/repo` (e.g., `danilosoftwares/ReactCapilar`).
+- `{branch}`: The branch name such as `develop`.
 
 ## How It Works
 
@@ -41,11 +49,12 @@ danilosoftwares/BloomMany
 
 If the latest commits are:
 ```sh
-feat: added new feature X
-fix: fixed bug Y
-chore: updated README
+1.0.0: Initial release.
+1.1.0: feat: Added new functionality, compatible with 1.0.0.
+1.1.1: fix: Bug fix in 1.1.0.
+2.0.0: BREAKING CHANGE: Incompatible API changes, breaking compatibility with 1.x.
 ```
-The generated version might be **2.3.2** (depending on the versioning rules used).
+The generated version might be **2.0.0** (depending on the versioning rules used).
 
 ## GitHub Token Permissions
 
@@ -75,12 +84,12 @@ PATCH (Patch Version):
 Increments when bug fixes or minor adjustments that do not change the API are made.
 
 Example Commits:
-```
+```sh
 1.0.0: Initial release.
 1.1.0: feat: Added new functionality, compatible with 1.0.0.
 1.1.1: fix: Bug fix in 1.1.0.
 2.0.0: BREAKING CHANGE: Incompatible API changes, breaking compatibility with 1.x.
-````
+```
 
 ![](flow.svg)
 
